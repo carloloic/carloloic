@@ -1,0 +1,18 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# 生成月亮的数据
+theta = np.linspace(0, 2*np.pi, 100)
+radius = 1.0  # 月亮的半径
+x = radius * np.cos(theta)
+y = radius * np.sin(theta)
+
+# 绘制月亮
+plt.figure(figsize=(5, 5))
+plt.plot(x, y, 'k')
+plt.gca().set_aspect('equal', adjustable='box')
+plt.title('Proof that the moon is round')
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.grid(True)
+plt.show()
